@@ -22,13 +22,13 @@ public void quick(int[] arreglo,int primero, int ultimo){
     //punteros para guardar valores
     izquierda = primero;
     derecha = ultimo;
-    System.out.println("Primero =" + primero +"\n" );
-    System.out.println("ultimo =" + ultimo +"\n");
-    System.out.println("derecha =" + derecha +"\n");
-    System.out.println("Izquierda =" + izquierda +"\n");
+    System.out.println("Primero = indice :" + primero +"\n" );
+    System.out.println("ultimo = indice :" + ultimo +"\n");
+    System.out.println("derecha = indice :" + derecha +"\n");
+    System.out.println("Izquierda = indice :" + izquierda +"\n");
     
     //Elemento para comparar
-    pivote = arreglo[primero];
+    pivote = arreglo[ultimo];
     System.out.println("Pivote =" + pivote +"\n");
     //Mientras que izquierda sea menor que derecha
     do{ 
@@ -36,14 +36,14 @@ public void quick(int[] arreglo,int primero, int ultimo){
         while(arreglo[izquierda]<pivote){
             imprimeArreglo(arreglo);
             izquierda++;//avanza el indice izquierdo
-            System.out.println("Avanza el indice izquierdo = " + izquierda + "\n");
+            System.out.println("retrocede la variable derecha al indice =" + izquierda + "\n");
         }
         
         //mientras que el valor de la derecha sea menor que el valor del pivote
         while(arreglo[derecha]>pivote){
             imprimeArreglo(arreglo);
             derecha--;//retrocede el indice derecho
-            System.out.println("retrocede el indice derecho =" + derecha + "\n");
+            System.out.println("Avanza la variable izquierda al inidice =" + derecha + "\n");
         }
         
         // ********Aqui se hace el intercambio de variables************
@@ -55,7 +55,7 @@ public void quick(int[] arreglo,int primero, int ultimo){
             izquierda++; //avanzamos a la izquierda 1 posicion
             derecha--; // disminuimos a la derecha 1 posicion
             imprimeArreglo(arreglo);
-            System.out.println("Movimiento de elementos de izquierda =" + izquierda +  " a derecha" + derecha +" y avanzamos en ambos punteros:" + "\n" );
+            System.out.println("Movimiento  de izquierda en el inidice =(" + izquierda + " -1)"+  " a derecha en el inidice =(" + derecha + " +1)"+" y avanzamos en ambos punteros"+"\n" );
          }
     
     //mientras que izquierda sea menor que derecha    
@@ -75,6 +75,7 @@ public void quick(int[] arreglo,int primero, int ultimo){
         quick(arreglo, izquierda, ultimo);//quick(arreglo, punteros izquierda, ultimo);
         System.out.println("Se llama recursivo porq izquierda =" + izquierda + " es menor que ultimo ="+ultimo + "\n");
     }
+    System.out.println("Operacion Finalizada Con Exito");
 }
 //metodo para imprimir
 public void imprimeArreglo(int[] numeros) {
