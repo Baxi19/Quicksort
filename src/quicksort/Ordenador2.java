@@ -32,14 +32,14 @@ public void quick(int[] arreglo,int primero, int ultimo){
     System.out.println("Pivote =" + pivote +"\n");
     //Mientras que izquierda sea menor que derecha
     do{ 
-        //mientras que el valor de la izquierda sea menor que el valor del pivote
+        //mientras que el valor de la derecha sea menor que el valor del pivote
         while(arreglo[der]<pivote){
             imprimeArreglo(arreglo);
             der++;//avanza el indice derecho
             System.out.println("avanza la variable derecha al indice =" + der + "\n");
         }
         
-        //mientras que el valor de la derecha sea menor que el valor del pivote
+        //mientras que el valor de la izquierda sea menor que el valor del pivote
         while(arreglo[izq]>pivote){
             imprimeArreglo(arreglo);
             izq--;//retrocede el indice izquierdo
@@ -49,30 +49,30 @@ public void quick(int[] arreglo,int primero, int ultimo){
         // ********Aqui se hace el intercambio de variables************
         // si el valor de la derecha es menor o igual que el de la izquierda
         if(der<=izq){
-            auxiliar = arreglo[der];//Guardamos el valor de la izquierda en el aux
-            arreglo[der] = arreglo[izq];//agregamos el valor a izquierda
-            arreglo[izq] = auxiliar;//agregamos el valor a derecha
-            der++; //avanzamos a la izquierda 1 posicion
-            izq--; // disminuimos a la derecha 1 posicion
+            auxiliar = arreglo[der];//Guardamos el valor de la derecha en el aux
+            arreglo[der] = arreglo[izq];//agregamos el valor a derecha
+            arreglo[izq] = auxiliar;//agregamos el valor a izquierda
+            der++; //avanzamos a la derecha 1 posicion
+            izq--; // disminuimos a la izquierda 1 posicion
             imprimeArreglo(arreglo);
             System.out.println("Movimiento entre numeros "+"\n" );
          }
     
-    //mientras que izquierda sea menor que derecha    
+    //mientras que derecha sea menor que izquierda    
     }while(der<izq);
     imprimeArreglo(arreglo);
     
-    //si el primero es menor que el puntero derecha
+    //si el primero es menor que el puntero izquierda
     if(primero < izq){
         //Enviamos los valores de la lista desde el inicio hasta donde se toparon los punteros
-        quick(arreglo, primero, izq);//quick(arreglo, primero, punteros derecha);
+        quick(arreglo, primero, izq);//quick(arreglo, primero, punteros izquierda);
         System.out.println("Se llama recursivo porq primero ="+ primero +" es menor que derecha =" + izq + "\n");
     }
        
-    //si el puntero izquierda es menor que ultimo
+    //si el puntero derecha es menor que ultimo
     if(der < ultimo){
         //Enviamos los valores de la lista desde donde se toparon los punteros hasta el inicio 
-        quick(arreglo, der, ultimo);//quick(arreglo, punteros izquierda, ultimo);
+        quick(arreglo, der, ultimo);//quick(arreglo, punteros derecha, ultimo);
         System.out.println("Se llama recursivo porq izquierda =" + der + " es menor que ultimo ="+ultimo + "\n");
     }
     System.out.println("Operacion Finalizada Con Exito");
