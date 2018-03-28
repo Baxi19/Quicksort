@@ -15,7 +15,7 @@ public class Quicksort {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] numeros = {4,3,1,5,2};
+        int[] numeros = {4,3,1,2};
         Ordenador2 a = new Ordenador2();
         a.quick(numeros,0, numeros.length -1 );
     }
