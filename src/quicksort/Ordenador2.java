@@ -15,7 +15,10 @@ public class Ordenador2 {
 public void quick(int[] arreglo,int primero, int ultimo){
     //variables para la izq, derecha un pivote y un aux
     int izquierda,derecha,pivote, auxiliar;
-    
+    System.out.println("=====================================================================================================" + "\n");
+    System.out.println("****LISTA******");
+    imprimeArreglo(arreglo);
+    System.out.println("**************" + "\n");
     //punteros para guardar valores
     izquierda = primero;
     derecha = ultimo;
