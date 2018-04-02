@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package quicksort;
 
 /**
@@ -33,21 +29,24 @@ public void quick(int[] arreglo,int primero, int ultimo){
     //Mientras que izquierda sea menor que derecha
     do{ 
         //mientras que el valor de la derecha sea menor que el valor del pivote
+        System.out.println("Es "+ arreglo[der] +" menor que " + pivote  + "?\n");
         while(arreglo[der]<pivote){
             imprimeArreglo(arreglo);
             der++;//avanza el indice derecho
-            System.out.println("avanza la variable derecha al indice =" + der + "\n");
+            System.out.println("avanza la variable derecha  al indice =" + der + "\n");
         }
         
         //mientras que el valor de la izquierda sea menor que el valor del pivote
+        System.out.println("Es "+ arreglo[izq] +" mayor que " + pivote  + "?\n");
         while(arreglo[izq]>pivote){
             imprimeArreglo(arreglo);
             izq--;//retrocede el indice izquierdo
-            System.out.println("retrocede la variable izquierda al inidice =" + izq + "\n");
+            System.out.println("retrocede la variable izquierda  al inidice =" + izq + "\n");
         }
         
         // ********Aqui se hace el intercambio de variables************
         // si el valor de la derecha es menor o igual que el de la izquierda
+        System.out.println("Es el inidice "+ der +" menor o igual que el indice " + izq + "?\n");
         if(der<=izq){
             auxiliar = arreglo[der];//Guardamos el valor de la derecha en el aux
             arreglo[der] = arreglo[izq];//agregamos el valor a derecha
@@ -60,7 +59,7 @@ public void quick(int[] arreglo,int primero, int ultimo){
     
     //mientras que derecha sea menor que izquierda    
     }while(der<izq);
-    imprimeArreglo(arreglo);
+    //imprimeArreglo(arreglo);
     
     //si el primero es menor que el puntero izquierda
     if(primero < izq){
@@ -75,7 +74,7 @@ public void quick(int[] arreglo,int primero, int ultimo){
         quick(arreglo, der, ultimo);//quick(arreglo, punteros derecha, ultimo);
         System.out.println("Se llama recursivo porq izquierda =" + der + " es menor que ultimo ="+ultimo + "\n");
     }
-    System.out.println("Operacion Finalizada Con Exito");
+    System.out.println("Ciclo Finalizado con Exito");
 }
 //metodo para imprimir
 public void imprimeArreglo(int[] numeros) {
