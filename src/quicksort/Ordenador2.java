@@ -33,7 +33,7 @@ public void quick(int[] arreglo,int primero, int ultimo){
         while(arreglo[der]<pivote){
             imprimeArreglo(arreglo);
             der++;//avanza el indice derecho
-            System.out.println("avanza la variable derecha  al indice =" + der + "\n");
+            System.out.println("avanza la variable derecha  \n");
         }
         
         //mientras que el valor de la izquierda sea menor que el valor del pivote
@@ -41,7 +41,7 @@ public void quick(int[] arreglo,int primero, int ultimo){
         while(arreglo[izq]>pivote){
             imprimeArreglo(arreglo);
             izq--;//retrocede el indice izquierdo
-            System.out.println("retrocede la variable izquierda  al inidice =" + izq + "\n");
+            System.out.println("retrocede la variable izquierda  \n");
         }
         
         // ********Aqui se hace el intercambio de variables************
